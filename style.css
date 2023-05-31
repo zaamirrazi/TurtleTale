@@ -1,0 +1,457 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navigation styles */
+nav{
+    background: #2a2a2a;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 0 45px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 10px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #727476;
+    transition: 0.5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:938px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 8px;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#2c3350 ;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background:none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/* main */
+.background_image{
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background: url("Media/background\ 1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    padding: 50px;
+}
+.box1{
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background: url("Media/turtletales-high-resolution-logo-color-on-transparent-background.png");
+    background-position: center;
+    background-size: contain;
+}
+.box2{
+    width: 500px;
+    height: 500px;
+    padding: 100px 30px;
+    border: #000000;
+    border-radius: 3px;
+}
+.box2 h1{
+    color: rgb(16, 16, 16);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.box2 h2{
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.box2 p{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/* category page */
+.category_main{
+    background: url("Media/catbg.jpg");
+    padding: 60px;
+}
+.container_content{
+    text-align: center;
+}
+.container_content h2{
+    font: bold;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 0 0;
+}
+.container_content p{
+    font-style: italic;
+    font-size: 20px;
+    color: grey;
+}
+.round_container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+.img2{
+    width: 450px;
+    height: 400px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.round_container h2{
+    font-family: cursive;
+    font-weight: 600;
+    color: rgb(186, 177, 245);
+}
+.round_container p{
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+}
+
+/* Hikkaduwa */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .col-top {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding-right: 15px;
+    padding-left: 15px;
+    background: url("Media/hikkaduwa\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .col-top img{
+    align-items: center;
+    padding: 0 100px;
+    background-position: center;
+    opacity: 0;
+  }
+  .col-top h1{
+    font-size: 100px;
+    font-weight: bold;
+    padding-top: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .col-below {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .cont p{
+    padding: 100px 50px;
+    text-align: center;
+    justify-content: center;
+  }
+  .map iframe{
+    height: 500px;
+  }
+
+  @media (max-width: 767.98px) {
+    .col-below {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  /* threats */
+  .threat_main{
+    background: url("Media/threatbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .threat_top{
+    padding: 50px 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  .threat_top header{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .threat_top p{
+    padding: 20px;
+    font-style: 30px;
+    color: white;
+  }
+  .column1 {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+  }
+  .column1 .imgthreat img{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+  }
+  .column1 .textthreat h1{
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold
+  }
+  .column1 .textthreat p{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-style: italic;
+  }
+  
+  /* Clear floats after the columns */
+  .rowthreat:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  /* Purchase and Donate page */
+
+  .donatetitle{
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 50px;
+  }
+  #donations {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    margin-top: 300px;
+  }
+    .donation {
+      width: 600px; 
+      padding: 30px; 
+      margin: 20px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: -100px;
+    }
+    
+
+    .donation img {
+      width: 450px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: -150px;
+    }
+    
+    .donation h3 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    
+    .donation p {
+      margin-bottom: 10px;
+    }
+    
+    .donation a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #42b983;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+    .donation a:hover {
+      background-color: #368b6d;
+    }
+    
+    /* Animation */
+    @keyframes donationFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .donation {
+      animation: donationFadeIn 1s ease-in-out;
+    }
+
+    
+    #merchandise {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      
+      .merch1 {
+        width: 600px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        text-align: center;
+        border: 0px solid #42b983;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: scale-animation 0.5s ease-in-out alternate infinite;
+        margin-top: 170px;
+      }
+      
+      .merch1 img {
+        width: 450px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-top: -150px; 
+      }
+      
+      .merch1 h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 10px 0;
+      }
+      
+      .merch1 p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      
+      .merch1 .price {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      
+      .merch1 a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #42b983;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        transition: background-color 0.3s ease;
+      }
+      
+      .merch1 a:hover {
+        background-color: #368b6d;
+      }
+      
+      @keyframes scale-animation {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.03);
+        }
+      }
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    font-size: 14px;
+    background: #2a2a2a;
+    color: white;
+    padding:10px;
+}
