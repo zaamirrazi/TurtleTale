@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Buy Tickets</h1>
+    <h2>Payment details</h2>
+    <form id="payment-form">
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" required pattern="\d{16}" maxlength="16" placeholder="1234 5678 9012 3456">
+
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="text" id="expiry-date" required pattern="\d{2}/\d{2}" maxlength="5" placeholder="MM/YY">
+
+        <label for="cvc">CVC / CVV:</label>
+        <input type="text" id="cvc" required pattern="\d{3}" maxlength="3" placeholder="123">
+
+        <label for="name-on-card">Name on Card:</label>
+        <input type="text" id="name-on-card" required>
+
+        <button type="submit" id="pay-button" disabled>Pay <span id="total-amount"></span></button>
+    </form>
+
+    <script src="payment.js"></script>
+</body>
+</html>

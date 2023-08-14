@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Buy Tickets</h1>
+    <div class="main-container">
+        <div class="left-section">
+            <section id="dates-section">
+                <h2>Dates</h2>
+                <input type="date" id="visit-date">
+            </section>
+            <section id="guests-section">
+                <h2>Guests</h2>
+                <label class="lbl">SL Adult: <input class="inpt" type="number" id="sl-adult" min="0"></label>
+                <label class="lbl">SL Child: <input class="inpt" type="number" id="sl-child" min="0"></label>
+                <label class="lbl">Foreigner Adult: <input class="inpt" type="number" id="foreigner-adult" min="0"></label>
+                <label class="lbl">Foreigner Child: <input class="inpt" type="number" id="foreigner-child" min="0"></label>
+                <label class="lbl">Infant: <input type="number" id="infant" min="0"></label>
+            </section>
+            <section id="duration-section">
+                <h2>Duration</h2>
+                <label for="time-slot">Select Time Slot:</label>
+                <select id="time-slot" multiple>
+                    <option value="07-08">07.00 am - 08.00 am</option>
+                    <option value="08-09">08.00 am - 09.00 am</option>
+                    <option value="09-10">09.00 am - 10.00 am</option>
+                    <option value="10-11">10.00 am - 11.00 am (Peak)</option>
+                    <option value="11-12">11.00 am - 12.00 pm</option>
+                    <option value="12-01">12.00 pm - 01.00 pm</option>
+                    <option value="01-02">01.00 pm - 02.00 pm</option>
+                    <option value="02-03">02.00 pm - 03.00 pm</option>
+                    <option value="03-04">03.00 pm - 04.00 pm</option>
+                    <option value="04-05">04.00 pm - 05.00 pm</option>
+                    <option value="05-06">05.00 pm - 06.00 pm (Peak)</option>
+                </select>
+            </section>
+            <button class="tibutton" id="continue-buttontickets" disabled>Continue with Purchase</button>
+        </div>
+        <div class="right-section">
+            <h2>Summary</h2>
+            <table id="summary-table">
+                <tr>
+                    <td>Date</td>
+                    <td id="summary-date"></td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td id="summary-time"></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="summary-duration"></td>
+                </tr>
+                <!-- Ticket details will be inserted here -->
+                <tr>
+                    <td>Total Payable</td>
+                    <td id="summary-total"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="tickets.js"></script>
+</body>
+</html>

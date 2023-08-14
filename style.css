@@ -455,3 +455,25 @@ footer {
     color: white;
     padding:10px;
 }
+
+
+
+
+/* task 3 - semester 2 */
+
+.lbl, .slct, .inpt {
+  display: block;
+  margin: 10px 0;
+}
+
+.tibutton:disabled {
+  background-color: #ccc;
+}
+
+.tibutton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
